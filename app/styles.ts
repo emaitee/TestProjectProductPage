@@ -1,7 +1,15 @@
 import {StyleSheet} from 'react-native';
 import {carouselSize} from './ProductCarousel';
 
-const appFont = {
+interface AppFont {
+  sm: number;
+  md: number;
+  lg: number;
+  xl: number;
+  xxl: number;
+}
+
+const appFont: AppFont = {
   sm: 12,
   md: 14,
   lg: 16,
@@ -9,7 +17,7 @@ const appFont = {
   xxl: 20,
 };
 
-const makeStyles = colors =>
+const makeStyles = (colors: any) =>
   StyleSheet.create({
     productItemContainer: {
       marginHorizontal: 10,
@@ -22,7 +30,7 @@ const makeStyles = colors =>
       fontWeight: 'bold',
       fontSize: appFont.lg,
       marginRight: 5,
-      color: colors.black,
+      color: colors.secondary,
       marginVertical: 5,
     },
     views: {
@@ -33,7 +41,7 @@ const makeStyles = colors =>
     },
     username: {
       marginRight: 5,
-      color: colors.black,
+      color: colors.secondary,
       fontWeight: 'bold',
       fontSize: appFont.lg,
     },
@@ -47,13 +55,16 @@ const makeStyles = colors =>
     },
     descriptionBody: {
       fontSize: appFont.md,
-      color: colors.black,
+      color: colors.secondary,
       lineHeight: 20,
     },
     caroImg: {
       width: carouselSize.width,
       height: carouselSize.height,
       resizeMode: 'cover',
+    },
+    headerTitle: {
+      fontSize: appFont.xl,
     },
 
     mr5: {

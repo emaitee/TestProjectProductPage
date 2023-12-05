@@ -28,7 +28,11 @@ const ProductView = withTheme(() => {
             <Text>2hrs ago</Text>
           </View>
           <View style={styles.my10}>
-            <IonIcons name="bookmark-outline" size={26} color={colors.black} />
+            <IonIcons
+              name="bookmark-outline"
+              size={26}
+              color={colors.secondary}
+            />
           </View>
         </View>
 

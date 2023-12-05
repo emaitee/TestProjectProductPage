@@ -26,9 +26,8 @@ const theme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    primary: '#007bff',
-    secondary: 'tomato',
-    black: '#000',
+    primary: '#3880c3',
+    secondary: '#000',
   },
   fonts: configureFonts({config: fontConfig}),
 };
