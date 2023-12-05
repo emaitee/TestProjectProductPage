@@ -2,12 +2,15 @@ import {View, Text} from 'react-native';
 import React from 'react';
 import IonIcons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import styles from './styles';
 import {Avatar, Divider, useTheme, withTheme} from 'react-native-paper';
 import AppTopBar from './AppTopBar';
 import ProductCarousel from './ProductCarousel';
+import makeStyles from './styles';
 
 const ProductView = withTheme(() => {
+  const {colors} = useTheme();
+  const styles = makeStyles(colors);
+
   return (
     <View>
       <AppTopBar />
@@ -24,8 +27,8 @@ const ProductView = withTheme(() => {
             </View>
             <Text>2hrs ago</Text>
           </View>
-          <View>
-            <IonIcons name="bookmark-outline" size={26} color="black" />
+          <View style={styles.my10}>
+            <IonIcons name="bookmark-outline" size={26} color={colors.black} />
           </View>
         </View>
 
@@ -35,14 +38,14 @@ const ProductView = withTheme(() => {
           <Avatar.Image
             size={40}
             source={{
-              uri: 'https://media.licdn.com/dms/image/C5603AQFKIBi8Nwqt9A/profile-displayphoto-shrink_800_800/0/1574311679550',
+              uri: 'https://avatars.githubusercontent.com/u/31075233?v=4',
             }}
-            style={styles.mr5}
+            style={styles.mr10}
           />
           <View style={styles.col}>
             <View style={styles.row}>
               <Text style={styles.username}>@username</Text>
-              <MaterialIcons name="verified" color="blue" size={20} />
+              <MaterialIcons name="verified" color={colors.primary} size={20} />
             </View>
             <Text>Federal university of technology, minna</Text>
           </View>
